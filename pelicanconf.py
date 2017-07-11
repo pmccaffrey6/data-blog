@@ -39,7 +39,7 @@ HEADER_MENUITEMS = [('HOME', '/')]
 DISPLAY_PAGES_ON_MENU = False
 
 # Theme
-THEME = "/themes/martin-pelican"
+THEME = "themes/martin-pelican"
 
 # Ipynb plugin
 MARKUP = ('md', 'ipynb')
