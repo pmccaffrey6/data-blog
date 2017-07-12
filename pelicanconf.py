@@ -46,3 +46,6 @@ MARKUP = ('md', 'ipynb')
 
 PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['ipynb.markup']
+
+# Disqus
+DISQUS_SITENAME = "data-blog-1.disqus.com"
