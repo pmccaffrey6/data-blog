@@ -1,18 +1,20 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,300,600);
-@import url(http://fonts.googleapis.com/css?family=Playfair+Display:900italic,900);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,300,600);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:100regular);
+@import url(https://fonts.googleapis.com/css?family=Zilla+Slab:900medium,900);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:light);
 
 
 /*--------------------------------
   Typography
 --------------------------------*/
 
-body              { font: 200 18px/1.61em 'Open Sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; color: #444; }
+body              { font: 200 18px/1.61em 'Zilla Slab', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; color: #444; }
 a                 { text-decoration: none; color: inherit; border-bottom: 1px solid #ddd; }
 a:hover           { border-bottom: 1px solid #222; }
 em                { font-style: italic; }
 strong            { font-weight: 600; }
 h1, h2, h3,
-h4, h5, h6        { font-family: 'Playfair Display', 'Didot LT STD', Garamond, serif; font-weight: 900; color: #222; margin: 1em 0;}
+h4, h5, h6        { font-family: 'Zilla Slab', 'Didot LT STD', Garamond, serif; font-weight: 900; color: #222; margin: 1em 0;}
 h1                { font-size: 2em; line-height: 1.33em;}
 h2                { font-size: 1.55em; line-height: 1.25em; }
 h3                { font-size: 1.15em; }

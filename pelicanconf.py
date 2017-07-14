@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHORS = ['peter','jonathan']
-SITENAME = 'data-science-blog'
+SITENAME = 'Data Blog'
 SITEURL = ''
 
 PATH = 'content'
@@ -28,7 +28,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
-DEFAULT_PAGINATION = False
+DEFAULT_PAGINATION = 5
 DEFAULT_DATE = 'fs'
 
 # Uncomment following line if you want document-relative URLs when developing
