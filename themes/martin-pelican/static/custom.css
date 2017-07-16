@@ -43,3 +43,9 @@ h1 {
   margin-top: 10vh;
   margin-bottom: 10vh;
 }
+
+.article-nanobar {
+  height: 2px;
+  background-color: blue;
+  
+}

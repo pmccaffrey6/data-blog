@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/theme/slicknav.css">
     <script src="/theme/jquery.slicknav.min.js"></script>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/nanobar/0.4.2/nanobar.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.min.js"></script>
     <script type="text/javascript" src="/theme/assets/js/custom.js"></script>
@@ -42,29 +43,32 @@
   </head>
 
   <body>
+    <div class="nanobar" id="article-nanobar">
+      <div class="bar"></div>
+    </div>
     <div id="wrapper container container-fluid">
-
       <header>
-	<nav class="navbar fixed-top navbar-light bg-faded"><ul id="menu" class="nav justify-content-center">
-        {% for title, link in HEADER_MENUITEMS %}
-            <li class="nav-item"><a class="nav-link" href="{{ link }}">{{ title }}</a></li>
-        {% endfor %}
-        {% if DISPLAY_PAGES_ON_MENU %}
-          {% for p in pages %}
-            <li class="nav-item" {% if p == page %} class="active"{% endif %}><a class="nav-link" href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+      	<nav class="navbar fixed-top navbar-light bg-faded"><ul id="menu" class="nav justify-content-center">
+          {% for title, link in HEADER_MENUITEMS %}
+          <li class="nav-item"><a class="nav-link" href="{{ link }}">{{ title }}</a></li>
           {% endfor %}
-        {% else %}
+          {% if DISPLAY_PAGES_ON_MENU %}
+            {% for p in pages %}
+            <li class="nav-item" {% if p == page %} class="active"{% endif %}><a class="nav-link" href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+            {% endfor %}
+          {% else %}
           {% if DISPLAY_CATEGORIES_ON_MENU %}
             {% for cat, null in categories %}
-              <li class="nav-item" {% if cat == category %} class="active"{% endif %}><a class="nav-link" href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+            <li class="nav-item" {% if cat == category %} class="active"{% endif %}><a class="nav-link" href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
             {% endfor %}
           {% endif %}
-        {% endif %}
-        </ul></nav><!-- /#menu -->
+          {% endif %}
+          </ul>
+        </nav><!-- /#menu -->
         <div class="downloads">
-	    {% for site, url in SOCIAL%}
+    	    {% for site, url in SOCIAL%}
           <a href="{{url}}" class="fa fa-{{site}}"></a>
-	    {% endfor %}
+    	    {% endfor %}
         </div>
       </header>
       <section class="container container-fluid main-content">
