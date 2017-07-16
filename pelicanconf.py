@@ -51,4 +51,4 @@ PLUGINS = ['ipynb.markup']
 IGNORE_FILES = ['.ipynb_checkpoints']
 
 # Disqus
-DISQUS_SITENAME = "data-blog"
+DISQUS_SITENAME = "data-blog-1"
