@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHORS = ['peter','jonathan']
-SITENAME = 'Data Blog'
+SITENAME = 'data blog'
 SITEURL = ''
 
 PATH = 'content'
@@ -52,4 +52,3 @@ IGNORE_FILES = ['.ipynb_checkpoints']
 
 # Disqus
 DISQUS_SITENAME = "data-blog-1"
-SITEURL = "data-blog.netlify.com"

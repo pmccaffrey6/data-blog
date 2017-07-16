@@ -2,10 +2,6 @@
   font-size: 0.85em;
 }
 
-h1 {
-  font-family: 'Zilla Slab', serif;
-}
-
 .prompt {
   display: none !important;
 }
@@ -44,8 +40,26 @@ h1 {
   margin-bottom: 10vh;
 }
 
-.article-nanobar {
+#article-nanobar {
   height: 2px;
-  background-color: blue;
-  
+}
+
+#article-nanobar > .bar {
+  background: blue;
+}
+
+#menu > .nav-item > .nav-link {
+  color: white;
+}
+
+.card {
+  margin-bottom: 2em;
+}
+
+.blog-main-heading {
+  margin-bottom: 2em;
+}
+
+.article-title {
+  margin-bottom: 0.2em;
 }

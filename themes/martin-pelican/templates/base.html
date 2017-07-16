@@ -17,6 +17,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.min.js"></script>
     <script type="text/javascript" src="/theme/assets/js/custom.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.0/css/mdb.min.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
     <![endif]-->
@@ -48,7 +49,7 @@
     </div>
     <div id="wrapper container container-fluid">
       <header>
-      	<nav class="navbar fixed-top navbar-light bg-faded"><ul id="menu" class="nav justify-content-center">
+      	<nav class="navbar fixed-top navbar-light bg-faded bg-primary"><ul id="menu" class="nav justify-content-center">
           {% for title, link in HEADER_MENUITEMS %}
           <li class="nav-item"><a class="nav-link" href="{{ link }}">{{ title }}</a></li>
           {% endfor %}
@@ -59,7 +60,7 @@
           {% else %}
           {% if DISPLAY_CATEGORIES_ON_MENU %}
             {% for cat, null in categories %}
-            <li class="nav-item" {% if cat == category %} class="active"{% endif %}><a class="nav-link" href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+            <li class="nav-item" {% if cat == category %} class="active"{% endif %}><a class="nav-link" href="{{ SITEURL }}/{{ cat.url }}">{{ cat | upper }}</a></li>
             {% endfor %}
           {% endif %}
           {% endif %}
