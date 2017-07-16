@@ -1,25 +1,27 @@
 {% extends "base.html" %}
 {% block header %}
-        <hgroup>
-          <h1>{{article.title}}</h1>
-  <footer class="article-footer">
-    {% if article.authors %}
-    <address class="vcard author">
-      By {% for author in article.authors %}
+  <div class="row justify-content-center">
+    <hgroup class="col-6 text-center">
+      <h1>{{article.title}}</h1>
+      <footer class="article-footer">
+        {% if article.authors %}
+        <address class="vcard author">
+          By {% for author in article.authors %}
           <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-        {% endfor %}
-    </address>
-    {% endif %}
-    <abbr class="published" title="{{ article.date.isoformat() }}">
-      {{ article.date.strftime(" on %d.%m.%Y") }}
-    </abbr>
-	{% if article.modified %}
-    <abbr class="modified" title="{{ article.modified.isoformat() }}">
-      {{ article.locale_modified }}
-    </abbr>
-	{% endif %}
-  </footer><!-- /.post-info -->
-        </hgroup>
+          {% endfor %}
+        </address>
+        {% endif %}
+      <abbr class="published" title="{{ article.date.isoformat() }}">
+        {{ article.date.strftime(" on %d.%m.%Y") }}
+      </abbr>
+	    {% if article.modified %}
+      <abbr class="modified" title="{{ article.modified.isoformat() }}">
+        {{ article.locale_modified }}
+      </abbr>
+	    {% endif %}
+      </footer><!-- /.post-info -->
+    </hgroup>
+  </div>
   {{ super() }}
   {% for keyword in article.keywords %}
     <meta name="keywords" contents="{{keyword}}" />
@@ -36,7 +38,8 @@
 {% endblock %}
 
 {% block content %}
-<section id="content" class="body article">
+<section class="container container-fluid">
+<div id="content" class="body article col-md-12">
   <div class="entry-content">
     {{ article.content }}
   </div><!-- /.entry-content -->
@@ -60,6 +63,7 @@
       {% endfor %}
   </div>
   </div>
+</div>
 </section>
 <div class="neighbors">
 {% if article.prev_article %}
