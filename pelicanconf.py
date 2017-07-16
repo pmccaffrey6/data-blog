@@ -47,5 +47,8 @@ MARKUP = ('md', 'ipynb')
 PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['ipynb.markup']
 
+# Ignore checkpoints
+IGNORE_FILES = ['.ipynb_checkpoints']
+
 # Disqus
 DISQUS_SITENAME = "data-blog-1.disqus.com"
