@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/theme/assets/css/application-minimal.css">
+    <link rel="stylesheet" href="/theme/assets/css/application-bold.css">
     <!--<link rel="stylesheet" href="/theme/styles.css">-->
     <link rel="stylesheet" href="/theme/custom.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -45,7 +45,7 @@
   </head>
 
   <body>
-    <div id="wrapper">
+    <div id="wrapper container container-fluid">
 
       <header>
 	<nav class="navbar fixed-top navbar-light bg-faded"><ul id="menu" class="nav justify-content-center">
@@ -69,17 +69,28 @@
           <a href="{{url}}" class="fa fa-{{site}}"></a>
 	    {% endfor %}
         </div>
+      </header>
+      <section class="container container-fluid main-content">
         {% block header %}
         {% endblock %}
-      </header>
+
         {% block content %}
         {% endblock %}
+      </section>
       <footer>
-	  <a href="{{SITEURL}}/pages/about.html" >About</a>
-	  <div class="right-footer">
-	  <a href="{{SITEURL}}/categories.html" >Categories</a>
-	  <a href="{{SITEURL}}/tags.html" >Tags</a>
-	  </div>
+        <nav class="navbar navbar-light bg-faded">
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+        	    <a class="nav-link" href="{{SITEURL}}/pages/about.html" >About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{SITEURL}}/categories.html" >Categories</a>
+            </li>
+            <li class="nav-item">
+        	    <a class="nav-link" href="{{SITEURL}}/tags.html" >Tags</a>
+            </li>
+          </ul>
+        </nav>
       </footer>
 </body>
 </html>

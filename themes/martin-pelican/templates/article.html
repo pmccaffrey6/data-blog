@@ -38,7 +38,7 @@
 {% endblock %}
 
 {% block content %}
-<section class="container container-fluid">
+
 <div id="content" class="body article col-md-12">
   <div class="entry-content">
     {{ article.content }}
@@ -64,7 +64,7 @@
   </div>
   </div>
 </div>
-</section>
+<!--</section>-->
 <div class="neighbors">
 {% if article.prev_article %}
 <a href="{{SITEURL}}/{{article.prev_article.url}}" ><i class="fa fa-arrow-circle-left"></i>{{article.prev_article.title}}</a>

@@ -30,3 +30,8 @@
 .dataframe thead tr:only-child th {
   text-align: left !important;
 }
+
+.main-content {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
