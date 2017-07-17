@@ -14,7 +14,16 @@
 
         <div class="card">
           <div class="card-header">
-            {{ article.date.strftime("%d.%m.%Y") }} // By <span class="text-muted">{% for author in article.authors %}<a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>{% endfor %}</span>
+            <div class="row justify-content-between">
+            <div>
+            {{ article.date.strftime("%d.%m.%Y") }} // By <span class="text-muted">  {% for author in article.authors %}<a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>{% endfor %}</span>
+            </div>
+            {% if article.tags|length > 0 %}
+              <div>
+              Tags:  <span class="text-muted">{% for tag in article.tags %} <a href="{{SITEURL}}/{{tag.url}}">{{tag}}</a>{% endfor %}</span>
+              </div>
+            {% endif %}
+            </div>
           </div>
           <div class="card-block">
 

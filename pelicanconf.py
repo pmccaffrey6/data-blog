@@ -37,6 +37,7 @@ DEFAULT_DATE = 'fs'
 # Main menu items
 HEADER_MENUITEMS = [('HOME', '/')]
 DISPLAY_PAGES_ON_MENU = False
+DISPLAY_CATEGORIES_ON_MENU = True
 
 # Theme
 THEME = "themes/martin-pelican"
