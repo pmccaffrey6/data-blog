@@ -49,22 +49,31 @@
     </div>
     <div id="wrapper container container-fluid">
       <header>
-      	<nav class="navbar fixed-top navbar-light bg-faded bg-primary"><ul id="menu" class="nav justify-content-center">
-          {% for title, link in HEADER_MENUITEMS %}
-          <li class="nav-item"><a class="nav-link" href="{{ link }}">{{ title }}</a></li>
-          {% endfor %}
-          {% if DISPLAY_PAGES_ON_MENU %}
-            {% for p in pages %}
-            <li class="nav-item" {% if p == page %} class="active"{% endif %}><a class="nav-link" href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-            {% endfor %}
-          {% else %}
-          {% if DISPLAY_CATEGORIES_ON_MENU %}
-            {% for cat, null in categories %}
-            <li class="nav-item" {% if cat == category %} class="active"{% endif %}><a class="nav-link" href="{{ SITEURL }}/{{ cat.url }}">{{ cat | upper }}</a></li>
-            {% endfor %}
-          {% endif %}
-          {% endif %}
-          </ul>
+      	<nav class="navbar fixed-top navbar-toggleable-md navbar-dark bg-primary">
+          <div class="container">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="/">Data Blog</a>
+            <div class="collapse navbar-collapse">
+              <ul id="menu" class="navbar-nav mr-auto">
+                {% for title, link in HEADER_MENUITEMS %}
+                <li class="nav-item"><a class="nav-link" href="{{ link }}">{{ title }}</a></li>
+                {% endfor %}
+                {% if DISPLAY_PAGES_ON_MENU %}
+                  {% for p in pages %}
+                  <li class="nav-item" {% if p == page %} class="active"{% endif %}><a class="nav-link" href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+                  {% endfor %}
+                {% else %}
+                {% if DISPLAY_CATEGORIES_ON_MENU %}
+                  {% for cat, null in categories %}
+                  <li class="nav-item" {% if cat == category %} class="active"{% endif %}><a class="nav-link" href="{{ SITEURL }}/{{ cat.url }}">{{ cat | upper }}</a></li>
+                  {% endfor %}
+                {% endif %}
+              {% endif %}
+              </ul>
+            </div>
+          </div>
         </nav><!-- /#menu -->
         <div class="downloads">
     	    {% for site, url in SOCIAL%}
