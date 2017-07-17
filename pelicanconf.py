@@ -40,7 +40,7 @@ DISPLAY_PAGES_ON_MENU = False
 DISPLAY_CATEGORIES_ON_MENU = True
 
 # Theme
-THEME = "themes/martin-pelican"
+THEME = "themes/material"
 
 # Ipynb plugin
 MARKUP = ('md', 'ipynb')
