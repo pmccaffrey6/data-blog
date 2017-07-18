@@ -29,4 +29,11 @@ $(document).ready( function() {
     value = $(window).scrollTop();
     nanobar.go((value/max)*100);
   });
+
+  MathJax.Hub.Config({
+   tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    processEscapes: true
+  }
+  });
 });

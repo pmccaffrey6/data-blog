@@ -6,7 +6,7 @@
       <footer class="article-footer">
         {% if article.authors %}
           <p class="mb-0 lead">
-            {{ article.date.strftime(" on %d.%m.%Y") }} {% if article.modified %}; {{ article.locale_modified }}{% endif %}
+            {{ article.date.strftime(" on %m.%d.%Y") }} {% if article.modified %}; {{ article.locale_modified }}{% endif %}
           </p>
           <footer class="blockquote-footer">
             By {% for author in article.authors %}<cite title="Source Title">{{ author }}</cite>{% endfor %}
