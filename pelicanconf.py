@@ -4,8 +4,8 @@ from __future__ import unicode_literals
 
 AUTHORS = ['peter','jonathan']
 SITENAME = 'data blog'
-SITEURL = 'https://data-blog.netlify.com'
-
+#SITEURL = 'https://data-blog.netlify.com'
+SITEURL = ''
 PATH = 'content'
 
 TIMEZONE = 'America/Chicago'

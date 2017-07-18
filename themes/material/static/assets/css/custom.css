@@ -48,10 +48,6 @@
   background: #ffca28;
 }
 
-#menu > .nav-item > .nav-link {
-  color: white;
-}
-
 .card {
   margin-bottom: 2em;
 }
@@ -62,4 +58,8 @@
 
 .article-title {
   margin-bottom: 0.2em;
+}
+
+.end-article-tags {
+  margin-bottom: 3em;
 }
