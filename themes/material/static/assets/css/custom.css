@@ -15,26 +15,6 @@
   max-width: 100% !important;
 }
 
-.dataframe {
-  width: 100%;
-  border-spacing: 0px;
-  border-color: lightgray;
-  border-collapse: collapse;
-  font-family: 'Open Sans';
-  border: 0 !important;
-}
-
-.dataframe th {
-  background-color: #f5f5f5;
-  text-align: left;
-  font-weight: bold;
-  border: 0 !important;
-}
-
-.dataframe thead tr:only-child th {
-  text-align: left !important;
-}
-
 .main-content {
   margin-top: 10vh;
   margin-bottom: 10vh;

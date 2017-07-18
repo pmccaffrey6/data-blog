@@ -13,6 +13,9 @@ $(document).ready( function() {
   var htmlElems = Array.from(document.getElementsByClassName("output_html"));
   htmlElems.map(function(elem) {elem.className += " row justify-content-center"});
 
+  //set table class
+  $('table').removeClass('dataframe').prop('border', 0).addClass('table table-striped table-hover');
+
   //also apply this to bk-root class for Bokeh plots
   var bkRoot = Array.from(document.getElementsByClassName("bk-root"));
   bkRoot.map(function(elem) {elem.className += " row justify-content-center"});
