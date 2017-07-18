@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHORS = ['peter','jonathan']
 SITENAME = 'data blog'
-SITEURL = ''
+SITEURL = 'https://data-blog.netlify.com'
 
 PATH = 'content'
 
@@ -52,4 +52,8 @@ PLUGINS = ['ipynb.markup']
 IGNORE_FILES = ['.ipynb_checkpoints']
 
 # Disqus
-#DISQUS_SITENAME = "data-blog-1"
+# Note that as this https://disqus.com/home/discussion/channel-discussdisqus/issue_adding_disqus_to_pelican/
+# page points out, the disqus_url has to be an absolute path with the protocol. See
+# SITENAME above, the value of which is the same full Website URL value entered into
+# Disqus admin.
+DISQUS_SITENAME = "data-blog-1"
