@@ -27,7 +27,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
-DEFAULT_PAGINATION = 2
+DEFAULT_PAGINATION = 4
 DEFAULT_DATE = 'fs'
 
 # Uncomment following line if you want document-relative URLs when developing
