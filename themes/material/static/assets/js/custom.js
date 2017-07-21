@@ -38,10 +38,53 @@ $(document).ready( function() {
     nanobar.go((value/max)*100);
   });
 
-  MathJax.Hub.Config({
+  /*MathJax.Hub.Config({
    tex2jax: {
     inlineMath: [ ['$','$'], ["\\(","\\)"] ],
     processEscapes: true
+  },
+  "HTML-CSS": {
+    linebreaks: { automatic: true },
+    styles: {
+      ".MathJax_Display": {
+        "text-align": "center"
+      }
+    }
   }
   });
+});
+*/
+});
+
+// Custom MathJax Re-render
+$(document).ready( function() {
+  MathJax = {
+    jax: ["input/TeX","output/CommonHTML"],
+    CommonHTML: { linebreaks: {automatic: true}},
+    SVG: { linebreaks: {automatic: true}},
+    "HTML-CSS": { linebreaks: {automatic: true}},
+    extensions: ["tex2jax.js", "asciimath2jax.js", "mml2jax.js", "MathMenu.js", "MathZoom.js"],
+    TeX: {
+      extensions: ["AMSmath.js", "AMSsymbols.js", "autoload-all.js"]
+    },
+    tex2jax: {
+      inlineMath: [
+        ['$', '$'],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true
+    }
+  };
+
+  (function(d, script) {
+    script = d.createElement('script');
+    script.type = 'text/javascript';
+    script.async = true;
+    script.onload = function() {
+      // remote script has loaded
+    };
+    script.src = 'https://cdn.mathjax.org/mathjax/latest/MathJax.js';
+    d.getElementsByTagName('head')[0].appendChild(script);
+  }(document));
+
 });
